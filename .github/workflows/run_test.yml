@@ -1,6 +1,10 @@
 name: simple_calculator unit test
   
-on: [push]  
+on:
+  push:
+    paths:
+      - "tests/**"
+      - "tests_1b.py"  
   
 jobs:  
   build:  

@@ -3,7 +3,7 @@ name: max_subarray unit test
 on:
   push:
     paths:
-      - "max_subarray.py"
+      - "tests_1c.py"
       - "tests/**"
 jobs:  
   build:  
