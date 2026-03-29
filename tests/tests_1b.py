@@ -21,6 +21,7 @@ def test_multiplication():
     assert simple_calculator("multiply", 5, 3) == 15    # Test for positive numbers
     assert simple_calculator("multiply", -2, 2) == -4   # Test for negative and positive number
     assert simple_calculator("multiply", 0, 100) == 0   # Test for multiplication by zero
+    assert simple_calculator("multiply", 15.25, 4) == 61
 
 def test_division():
     assert simple_calculator("divide", 6, 3) == 2       # Test for positive numbers
@@ -37,5 +38,7 @@ def test_invalid_operation():
     with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
         simple_calculator("", 5, 3)                     # Test for empty operation
 
+def test_multiplication_with_negative_numbers():
+    assert simple_calculator("multiply", -5, -10) == 50
 if __name__ == "__main__":
     pytest.main()
